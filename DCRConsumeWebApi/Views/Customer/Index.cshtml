@@ -1,0 +1,139 @@
+﻿@model DCR.Helper.ViewModel.CustomerViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Customer Type</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Postal Code</th>
+        </tr>
+    </thead>
+    <tbody id="customerTableBody">
+    </tbody>
+</table>
+
+
+<script>
+
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Customer/GetCustomers",
+            type: "POST",
+            contentType: "application/json",
+            success: function (data) {
+                data = JSON.parse(data);
+                var tempMenu = "";
+
+                for (var i = 0; i < data.length; i++) {
+                    tempMenu += `
+                                <tr>
+                                <td>${data[i].customerName}</td>
+                                <td>${data[i].customerType}</td>
+                                <td>${data[i].customerEmail}</td>
+                                <td>${data[i].customerPhone}</td>
+                                <td>${data[i].customerAddress}</td>
+                                <td>${data[i].customerCity}</td>
+                                <td>${data[i].customerState}</td>
+                                <td>${data[i].customerCountry}</td>
+                                <td>${data[i].customerPostalCode}</td>
+                                </tr>
+                            `;
+                }
+                console.log(tempMenu);
+                $('#customerTableBody').html(tempMenu);
+
+            },
+            error: function (err) {
+                console.log("Error:", err);
+            }
+        });
+    });
+
+
+
+
+
+    // // ---------------- ADD NEW CUSTOMER ----------------
+
+    // function addcustomerfunction() {
+    //     var req = {
+    //         "CustomerViewModel": {
+    //             "UserPassword": $("#passwordinput").val(),
+    //             "ConfirmPassword": $("#confirmPasswordinput").val()
+    //         }
+    //     }
+
+
+    //     $.ajax({
+    //         "url": "/Account/JsonMatchPassword",
+    //         "type": "post",
+    //         "data": req,
+    //         "success": function (resp) {
+    //             if (resp.hasError) {
+    //                 toastr.error("Please Enter the Password");
+    //             }
+    //             else {
+
+    //                 window.location.href = "/Home/Dashboard";
+    //             }
+    //         }
+
+    //     })
+    // }
+
+    // $('#addcustomerbtn').on('click', function () {
+    //     addcustomerfunction()
+    // });
+
+
+
+
+    //  $(document).ready(function () {
+    //     $.ajax({
+    //         url: "/Customer/GetCustomers",
+    //         type: "POST",
+    //         contentType: "application/json",
+    //         success: function (data) {
+    //             var keys = Object.keys(data[0]);
+    //             var html = "<table class='table'><thread><tr>";
+
+    //             for (var key in keys) {
+    //                 html += "<th>" + keys[key] + "</th>";
+    //             }
+    //             html += "</tr></thread><tbody>";
+
+    //             for (var res in result) {
+    //                 html += "<tr>";
+    //                 var values = Object.values(data[res]);
+    //                 for (var val in values) {
+    //                     html += "<td>" + values[val] + "</td>";
+    //                 }
+    //                 html += "</tr>";
+    //             }
+    //             html += "</tbody></table>";
+    //             $("#table").append(html);
+    //         },
+    //         error: function (err) {
+    //             console.log("Error:", err);
+    //         }
+    //     });
+    // });
+
+
+
+</script>
+
+

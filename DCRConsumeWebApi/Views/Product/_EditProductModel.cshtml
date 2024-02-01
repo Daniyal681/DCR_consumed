@@ -1,0 +1,165 @@
+﻿@model DCR.Helper.ViewModel.ProductViewModel
+
+
+
+
+
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="ProductModalTitle">Edit PRODUCT</h5>
+        <button type="button" class="close" onclick="closeModal()" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form asp-action="JsonGetProduct" method="post" class="formTopbar" id="productEditModal">
+            @* @Html.AntiForgeryToken() *@
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            PRODUCT ID
+                        </div>
+                        <input type="text" asp-for="ProductId" id="productid" disabled="disabled" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-2">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            PRODUCT TYPE
+                        </div>
+                        <select asp-for="ProductType" class="form-select form-select-sm" id="producttype"
+                                aria-label=".form-select-sm example">
+                            <option selected>All</option>
+                            <option value="1">NOT KNOWN</option>
+                            <option value="2">NOT KNOWN</option>
+                            <option value="3">NOT KNOWN</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            MATERIAL ID
+                        </div>
+                        <input asp-for="MaterialId" type="text" id="materialId" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            PRODUCT PRICE
+                        </div>
+                        <input asp-for="ProductPrice" type="text" id="productprice" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            PRODUCT SKU
+                        </div>
+                        <input asp-for="ProductSku" type="text" id="productsku" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            PRODUCT CODE
+                        </div>
+                        <input asp-for="ProductCode" type="text" id="productcode" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            MARKET NAME
+                        </div>
+                        <input asp-for="MarketName" type="text" id="pmarketname" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">BRAND</div>
+                        <input asp-for="Brand" type="text" id="pbrand" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">MEMORY</div>
+                        <input asp-for="Memory" type="text" id="pmemory" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">MODEL</div>
+                        <input asp-for="Model" type="text" id="pmodel" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">COLOR</div>
+                        <input asp-for="Color" type="text" id="pcolor" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">SERIES</div>
+                        <input asp-for="Series" type="text" id="pseries" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="pmodelbtnupdate" class="btn btn-primary m-2 col-md-2">Submit</button>
+    </div>
+</div>
+
+
+<script>
+
+    $('#pmodelbtnupdate').on('click', function () {
+
+        var req = {
+            ProductId: $("#productid").val(),
+            ProductType: $("#producttype").val(),
+            MaterialId: $("#materialId").val(),
+            ProductPrice: $("#productprice").val(),
+            ProductSku: $("#productsku").val(),
+            ProductCode: $("#productcode").val(),
+            MarketName: $("#pmarketname").val(),
+            Brand: $("#pbrand").val(),
+            Memory: $("#pmemory").val(),
+            Model: $("#pmodel").val(),
+            Color: $("#pcolor").val(),
+            Series: $("#pseries").val()
+        }
+
+
+        $.ajax({
+            "url": '@Url.Action("JsonUpdateProduct","Product")',
+            "type": "post",
+            "data": { model: req },
+            "datatype": "json",
+            "success": function (resp) {
+                if (resp.hasError) {
+                    console.log(resp.hasError)
+                    toastr.error("Please Fill The Form");
+                }
+                else {
+                    $('#pmodelbtnupdate').attr("disabled", true);
+                    Swal.fire({
+                        title: "Updated!",
+                        text: "Your record has been Updated.",
+                        icon: "success"
+                    });
+                    $("#exampleModalCenter").modal('hide');
+                    $('#producttable').DataTable().ajax.reload();
+                }
+            }
+        })
+    });
+
+
+
+
+    // function closeModal() {
+    //     $('#exampleModalCenter').modal('hide');
+    // }
+
+
+</script>

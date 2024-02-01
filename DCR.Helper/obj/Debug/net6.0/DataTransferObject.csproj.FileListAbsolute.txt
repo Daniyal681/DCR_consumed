@@ -1,0 +1,11 @@
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\bin\Debug\net6.0\DataTransferObject.deps.json
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\bin\Debug\net6.0\DataTransferObject.dll
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\bin\Debug\net6.0\DataTransferObject.pdb
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\obj\Debug\net6.0\DataTransferObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\obj\Debug\net6.0\DataTransferObject.AssemblyInfoInputs.cache
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\obj\Debug\net6.0\DataTransferObject.AssemblyInfo.cs
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\obj\Debug\net6.0\DataTransferObject.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\obj\Debug\net6.0\DataTransferObject.dll
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\obj\Debug\net6.0\refint\DataTransferObject.dll
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\obj\Debug\net6.0\DataTransferObject.pdb
+C:\Users\user\Downloads\DCRGIT\DCR.Helper\obj\Debug\net6.0\ref\DataTransferObject.dll

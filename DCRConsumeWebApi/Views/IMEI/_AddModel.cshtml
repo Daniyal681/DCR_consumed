@@ -1,0 +1,144 @@
+﻿@model DCR.Helper.ViewModel.IMEIViewModel
+
+
+
+
+
+
+
+
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="ProductModalTitle">Add IMEI</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form asp-action="AddIMEI" method="post" class="formTopbar" id="productAddModal">
+            @* @Html.AntiForgeryToken() *@
+            <div class="row ">
+                <div class="col-md-6">
+                    <div hidden class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            IMEI ID
+                        </div>
+                        <input type="text" asp-for="ImeiId" id="imeiid" disabled="disabled" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            Product ID
+                        </div>
+                        <input type="text" asp-for="ProductId" value="1" id="productid" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            IMEI Number
+                        </div>
+                        <input asp-for="ImeiNumber" type="text" value="121122112211212" id="imeinumber" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            IMEI Number 2
+                        </div>
+                        <input asp-for="ImeiNumber2" type="text" value="121122112211212" id="imeinumber2" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            IMEI Status
+                        </div>
+                        <input asp-for="ImeiStatus" type="text" value="Active" id="imeistatus" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-2">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            Device TYPE
+                        </div>
+                        <select asp-for="DeviceType" class="form-select form-select-sm" id="devicetype"
+                                aria-label=".form-select-sm example">
+                            <option selected>All</option>
+                            <option value="SP">SP</option>
+                            <option value="FP">FP</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">Activation Date</div>
+                        <input asp-for="ActivationDate" type="date" id="activatedate" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="pmodelbtnAdd" class="btn btn-secondary m-2 col-md-2">Submit</button>
+    </div>
+</div>
+
+
+<script>
+
+
+    $('#pmodelbtnAdd').on('click', function () {
+        var req = {
+            ImeiId: $("#imeiid").val(),
+            ProductId: $("#productid").val(),
+            ImeiNumber: $("#imeinumber").val(),
+            ImeiNumber2: $("#imeinumber2").val(),
+            ImeiStatus: $("#imeistatus").val(),
+            DeviceType: $("#devicetype").val(),
+            ActivationDate: $("#activatedate").val(),
+
+        }
+
+
+        $.ajax({
+            "url": '@Url.Action("AddIMEI","IMEI")',
+            "type": "post",
+            "data": { model: req },
+            "datatype": "json",
+            "success": function (data) {
+                console.log(data.ProductViewModel)
+                if (data.hasError) {
+                    console.log(data.hasError)
+                    toastr.error("Please Fill The Form");
+                }
+                else {
+                    $('#pmodelbtnAdd').attr("disabled", true);
+                    Swal.fire({
+                        title: "Added!",
+                        text: "Your record has been Added.",
+                        icon: "success"
+                    });
+                    $("#exampleModalCenter").modal('hide');
+                    $('#imeitable').DataTable().ajax.reload();
+                }
+            }
+        })
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

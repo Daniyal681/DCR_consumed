@@ -1,0 +1,167 @@
+﻿@model DCR.Helper.ViewModel.ProductViewModel
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">ADD PRODUCT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="JsonAddProducts" method="post" class="formTopbar">
+                    @* @Html.AntiForgeryToken() *@
+                    <div class="row ">
+                        <div class="col-md-6">
+                              <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-text col-sm-4 txtSize">
+                            PRODUCT ID
+                            </div>
+                            <input type="text" id="productid" disabled="disabled" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-2">
+                                <div class="input-group-text col-sm-4 txtSize">
+                                    PRODUCT TYPE
+                                </div>
+                                <select asp-for="ProductType" class="form-select form-select-sm" id="producttype"
+                                        aria-label=".form-select-sm example">
+                                    <option selected>All</option>
+                                    <option value="1">NOT KNOWN</option>
+                                    <option value="2">NOT KNOWN</option>
+                                    <option value="3">NOT KNOWN</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">
+                                    MATERIAL ID
+                                </div>
+                                <input asp-for="MaterialId" type="text" value="12" id="materialId" class="form-control" placeholder="">
+                            </div>       
+                           
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">
+                                    PRODUCT PRICE
+                                </div>
+                                <input asp-for="ProductPrice" type="text" value="1000" id="productprice" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">
+                                    PRODUCT SKU
+                                </div>
+                                <input asp-for="ProductSku" type="text" value="SK10" id="productsku" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">
+                                    PRODUCT CODE
+                                </div>
+                                <input asp-for="ProductCode" type="text" value="3100" id="productcode" class="form-control" placeholder="">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">
+                                    MARKET NAME
+                                </div>
+                                <input asp-for="MarketName" type="text" value="saddar" id="pmarketname" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">BRAND</div>
+                                <input asp-for="Brand" type="text" value="infinix" id="pbrand" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">MEMORY</div>
+                                <input asp-for="Memory" type="text" value="6+128" id="pmemory" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">MODEL</div>
+                                <input asp-for="Model" type="text" value="x2323" id="pmodel" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">COLOR</div>
+                                <input asp-for="Color" type="text" value="grey" id="pcolor" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-text col-sm-4 txtSize">SERIES</div>
+                                <input asp-for="Series" type="text" value="Note" id="pseries" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="pmodelbtnsubmit" class="btn btn-primary m-2 col-md-2">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    function ProductModelfunction() {
+        var req = {
+            // "ProductId": $("#productid").val(),
+            ProductType: $("#producttype").val(),
+            MaterialId: $("#materialId").val(),
+            ProductPrice: $("#productprice").val(),
+            ProductSku: $("#productsku").val(),
+            ProductCode: $("#productcode").val(),
+            MarketName: $("#pmarketname").val(),
+            Brand: $("#pbrand").val(),
+            Memory: $("#pmemory").val(),
+            Model: $("#pmodel").val(),
+            Color: $("#pcolor").val(),
+            Series: $("#pseries").val()
+        }
+
+
+
+        $.ajax({
+            "url": "/Product/JsonAddProducts",
+            "type": "post",
+            "data": { model: req },
+            "datatype": "json",
+            "success": function (data) {
+                console.log(data.ProductViewModel)
+                if (data.hasError) {
+                    console.log(data.hasError)
+                    toastr.error("Please Fill The Form");
+                }
+                else {
+                    toastr.success("Record Successfully Saved", "", {
+                        onHidden: function () {
+                            window.location.reload();
+                        }
+                    });
+                }
+            }
+        })
+    }
+
+    $('#pmodelbtnsubmit').on('click', function () {
+        ProductModelfunction();
+    });
+
+
+</script>

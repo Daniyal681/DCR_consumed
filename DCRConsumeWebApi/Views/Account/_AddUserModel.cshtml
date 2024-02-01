@@ -1,0 +1,171 @@
+﻿@model DCR.Helper.ViewModel.LoginViewModel
+
+
+
+
+
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="UserModalTitle">Add User</h5>
+        <button type="button" class="close" onclick="closeModal()" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form asp-action="JsonAddUser" method="post" class="formTopbar" id="userAddModal">
+            @* @Html.AntiForgeryToken() *@
+            <div class="row ">
+                <div class="col-md-6">
+                    @* <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-text col-sm-4 txtSize">
+                    User ID
+                    </div>
+                    <input type="text" asp-for="UserId" id="userid" disabled="disabled" class="form-control" placeholder="">
+                    </div> *@
+
+                    @*  <div class="input-group input-group-sm mb-2">
+                    <div class="input-group-text col-sm-4 txtSize">
+                    PRODUCT TYPE
+                    </div>
+                    <select asp-for="" class="form-select form-select-sm" id="producttype"
+                    aria-label=".form-select-sm example">
+                    <option selected>All</option>
+                    <option value="1">NOT KNOWN</option>
+                    <option value="2">NOT KNOWN</option>
+                    <option value="3">NOT KNOWN</option>
+                    </select>
+                    </div> *@
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Login Id
+                        </div>
+                        <input asp-for="UserLoginId" type="text" id="userloginId" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Name
+                        </div>
+                        <input asp-for="UserName" type="text" id="username" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Email
+                        </div>
+                        <input asp-for="UserEmail" type="email" id="useremail" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Password
+                        </div>
+                        <input asp-for="UserPassword" type="text" id="userpassword" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Password
+                        </div>
+                        <input asp-for="ConfirmPassword" type="text" id="confirmpassword" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Contact
+                        </div>
+                        <input asp-for="UserContact" type="number" id="usercontact" autocomplete="off" class="form-control" placeholder="">
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="pmodelbtnsubmit" class="btn btn-primary m-2 col-md-2">Submit</button>
+    </div>
+</div>
+
+
+
+<script>
+
+    $('#pmodelbtnsubmit').on('click', function () {
+        // Collect form data
+        var req = {
+            UserLoginId: $("#userloginId").val(),
+            UserName: $("#username").val(),
+            UserEmail: $("#useremail").val(),
+            UserPassword: $("#userpassword").val(),
+            ConfirmPassword: $("#confirmpassword").val(),
+            UserContact: $("#usercontact").val()
+        }
+
+        // Check for empty fields
+        if (isAnyFieldEmpty(req)) {
+            toastr.error("Please fill in all fields.", "", {
+                timeOut: 3000,
+                progressBar: true,
+            });
+        } else {
+            $.ajax({
+                url: '@Url.Action("JsonAddUser", "Account")',
+                type: 'post',
+                data: { model: req },
+                datatype: 'json',
+                success: function (data) {
+                    if (data.response) {
+                        $('#pmodelbtnsubmit').attr("disabled", true);
+                        Swal.fire({
+                            title: "Added!",
+                            text: "Your record has been Added.",
+                            icon: "success"
+                        });
+                        $("#exampleModalCenter").modal('hide');
+                        $('#usertable').DataTable().ajax.reload();
+                    } else {
+                        toastr.error("Please Give Full Information");
+                    }
+                }
+            });
+        }
+    });
+
+
+    // Function to check if any field is empty
+    function isAnyFieldEmpty(req) {
+        for (var prop in req) {
+            if (req.hasOwnProperty(prop) && !req[prop]) {
+                return true; // Found an empty field
+            }
+        }
+        return false; // No empty fields found
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function closeModal() {
+        $('#exampleModalCenter').modal('hide');
+    }
+
+</script>
+
+
+
+
+

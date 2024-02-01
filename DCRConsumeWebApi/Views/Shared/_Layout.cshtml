@@ -1,0 +1,204 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/sidebarstyle.css" rel="stylesheet" />
+    <script src="~/js/kit.fontawesome.js"></script>
+    <script src="~/js/jquery-3.1.1.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/xlsx.full.min.js"></script>
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script src="~/js/jquery-datatables.min.js"></script>
+    <script src="~/js/bootstrap.min-4.js"></script>
+    <script src="~/js/datatables.button.min.js"></script>
+    <link href="~/css/bootstrap.min-4.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min-5.css" rel="stylesheet" />
+    <link href="~/css/datatables.min.css" rel="stylesheet" />
+    <link href="~/css/databtables.bootstrap.buttons.min.css" rel="stylesheet" />
+    <link href="~/css/sidebarstyle.css" rel="stylesheet" />
+    <link href="~/css/datatablestyle.css" rel="stylesheet" />
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+
+
+
+</head>
+
+
+
+
+<body class="sb-nav-fixed">
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <a href="dashboard.html">INOVI SOLUTIONS</a>
+                </div>
+                <ul id="sideBarMenus" class="sidebar-nav">
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Component -->
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <!-- Button for sidebar toggle -->
+                <button class="btn" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <span id="url"> </span>
+
+                <div id="navRightMenus">
+                    <ul class="navbar-nav">
+                        <li class="dropdown">
+
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user fa-fw"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="/Account/Login">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        const pathname = window.location.pathname.split('.')[0];
+        $(document).ready(function () {
+
+            $.ajax({
+                "url": "@Url.Action("Dashboard","Home")",
+                type: "POST",
+                contentType: "application/json", // Set content type to JSON
+                success: function (resp) {
+                    resp = JSON.parse(resp);
+                   let tempMenu = ``;
+                    for (var i = 0; i < resp.length; i++) {
+                        if (!resp[i].hasChildren && resp[i].parentId == null) {
+
+                            tempMenu += `
+                                      <li class="sid-item">
+                                      <a href="${resp[i].navigationUrl}" class="sidebar-link"><i class="${resp[i].iconClass} pe-2"></i>
+                                      ${resp[i].title}
+                                      </a>
+                                      </li>`;
+
+                        }
+                        else if (resp[i].hasChildren && resp[i].parentId == null) {
+
+                            tempMenu += `
+                                      <li class="sidebar-item">
+                                      <a href="${resp[i].navigationUrl}" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#pages-${resp[i].id}"
+                                      aria-expanded="false" aria-controls="pages-${resp[i].id}">
+                                      <i class="${resp[i].iconClass} pe-2""></i>
+                                              ${resp[i].title}
+                                      </a>
+                                      <ul id="pages-${resp[i].id}" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">`;
+
+                            for (let index = 0; index < resp.length; index++) {
+
+                                if (!resp[index].hasChildren && resp[index].parentId == resp[i].id) {
+
+                                    tempMenu += `
+                                         <li class="sidebar-item nest-item">
+                                                 <a href="${resp[index].navigationUrl}" class="sidebar-link">${resp[index].title}</a>
+                                         </li>`;
+
+                                }
+
+                            }
+                            tempMenu += `</ul></li>`;
+                        }
+                        if (resp[i].navigationUrl == pathname && resp[i].parentName == "") {
+                            $('#url').html(resp[i].title);
+                        }
+                        else if (resp[i].navigationUrl == pathname) {
+                            $('#url').html(resp[i].parentName + ' <i class="fas fa-angle-right"></i> ' + resp[i].title);
+                        }
+                    }
+                    $('#sideBarMenus').html(tempMenu);
+                }
+            });
+        })
+
+
+
+
+        const toggler = document.querySelector(".btn");
+        toggler.addEventListener("click", function () {
+            document.querySelector("#sidebar").classList.toggle("collapsed");
+        });
+
+
+
+    </script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <script src="~/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="~/assets/demo/chart-area-demo.js"></script>
+    <script src="~/assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+            crossorigin="anonymous"></script>
+
+
+    @* <script src="~/js/datatablescript.js"></script>
+    <script src="~/js/datatables.bootstrap.buttons.js"></script> *@
+    <script src="~/js/bootstrap.bundle.min-5.js"></script>
+
+
+
+
+    <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>

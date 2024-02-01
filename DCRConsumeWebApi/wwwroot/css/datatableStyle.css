@@ -1,0 +1,55 @@
+.custom-control-label,
+.btn-sm {
+    font-size: 11px;
+    padding: 0.2rem 0.5rem;
+}
+
+.txtSize{
+    font-size: 11px !important;
+    white-space: wrap;
+    text-align: left;
+}
+
+.custom-control.custom-radio+.custom-control.custom-radio {
+    margin-left: 0.1px;
+}
+
+.formTopbar {
+    font-size: 12px;
+    padding: 0.15rem 0.25rem;
+}
+
+.tablecard {
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .3);
+    border-radius: 7px;
+}
+
+.dataTables_length {
+    font-size: small;
+}
+
+.dataTables_filter {
+    font-size: small;
+}
+
+#myTable{
+    width: 100% !important;
+}
+
+input[type], select{
+    font-size: 12px !important;
+}
+
+.box {
+    width: 20vh;
+    height: 85vh;
+    padding-top: 15px;
+    border: 2px solid rgba(26, 33, 104, 0.452);
+    border-radius: 6px;
+}
+
+td{
+    white-space: nowrap;
+}

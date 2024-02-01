@@ -1,0 +1,397 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\DCRConsumeWebApi.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DCRConsumeWebApi.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\assets\\demo\\chart-area-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-area-demo.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\assets\\demo\\chart-bar-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-bar-demo.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\assets\\demo\\chart-pie-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-pie-demo.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\assets\\demo\\datatables-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\assets\\img\\404-error-img.png",
+      "PackagePath": "staticwebassets\\assets\\img\\404-error-img.png"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\assets\\img\\brand-logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brand-logo.png"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\assets\\img\\error-404-monochrome.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\error-404-monochrome.svg"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\assets\\img\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\bootstrap.min-4.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min-4.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\bootstrap.min-5.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min-5.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\bootstrap.minn.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.minn.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\databtables.bootstrap.buttons.min.css",
+      "PackagePath": "staticwebassets\\css\\databtables.bootstrap.buttons.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\datatableStyle.css",
+      "PackagePath": "staticwebassets\\css\\datatableStyle.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\datatables.min.css",
+      "PackagePath": "staticwebassets\\css\\datatables.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\sideBarStyle.css",
+      "PackagePath": "staticwebassets\\css\\sideBarStyle.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\bootstrap.bundle.min-5.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min-5.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\bootstrap.min-4.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min-4.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\dataTableScript.js",
+      "PackagePath": "staticwebassets\\js\\dataTableScript.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\datatables-simple-demo.js",
+      "PackagePath": "staticwebassets\\js\\datatables-simple-demo.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\datatables.bootstrap.buttons.js",
+      "PackagePath": "staticwebassets\\js\\datatables.bootstrap.buttons.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\datatables.button.min.js",
+      "PackagePath": "staticwebassets\\js\\datatables.button.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\jquery-3.1.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.1.1.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\jquery-datatables.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-datatables.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\kit.fontawesome.js",
+      "PackagePath": "staticwebassets\\js\\kit.fontawesome.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\loginScript.js",
+      "PackagePath": "staticwebassets\\js\\loginScript.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\sideBarScript.js",
+      "PackagePath": "staticwebassets\\js\\sideBarScript.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\js\\xlsx.full.min.js",
+      "PackagePath": "staticwebassets\\js\\xlsx.full.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\DCR\\DCRGIT\\DCRConsumeWebApi\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.DCRConsumeWebApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.DCRConsumeWebApi.props",
+      "PackagePath": "build\\DCRConsumeWebApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.DCRConsumeWebApi.props",
+      "PackagePath": "buildMultiTargeting\\DCRConsumeWebApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.DCRConsumeWebApi.props",
+      "PackagePath": "buildTransitive\\DCRConsumeWebApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

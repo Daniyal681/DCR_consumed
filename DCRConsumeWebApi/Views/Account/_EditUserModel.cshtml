@@ -1,0 +1,130 @@
+﻿@model DCR.Helper.ViewModel.LoginViewModel
+
+
+
+
+
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="UserModalTitle">Edit User</h5>
+        <button type="button" class="close" onclick="closeModal()" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form asp-action="JsonGetUser" method="post" class="formTopbar" id="userAddModal">
+            @* @Html.AntiForgeryToken() *@
+            <div class="row ">
+                <div class="col-md-6">
+                  @*   <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User ID
+                        </div>
+                        <input type="text" asp-for="UserId" id="userid" disabled="disabled" class="form-control" autocomplete="off" placeholder="">
+                    </div> *@
+
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Login Id
+                        </div>
+                        <input asp-for="UserLoginId" type="text" id="userloginId" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Name
+                        </div>
+                        <input asp-for="UserName" type="text" id="username" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Email
+                        </div>
+                        <input asp-for="UserEmail" type="email" id="useremail" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Password
+                        </div>
+                        <input asp-for="UserPassword" disabled type="text" id="userpassword" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Password
+                        </div>
+                        <input asp-for="ConfirmPassword" disabled type="text" id="confirmpassword" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-text col-sm-4 txtSize">
+                            User Contact
+                        </div>
+                        <input asp-for="UserContact" type="number" id="usercontact" class="form-control" autocomplete="off" placeholder="">
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="pmodelbtnsubmit" class="btn btn-primary m-2 col-md-2">Submit</button>
+    </div>
+</div>
+
+
+<script>
+
+    $('#pmodelbtnsubmit').on('click', function () {
+
+        var req = {
+            UserLoginId: $("#userloginId").val(),
+            UserName: $("#username").val(),
+            UserEmail: $("#useremail").val(),
+            UserPassword: $("#userpassword").val(),
+            ConfirmPassword: $("#confirmpassword").val(),
+            UserContact: $("#usercontact").val()
+        }
+
+
+        $.ajax({
+            "url": '@Url.Action("JsonUpdateUser","Account")',
+            "type": "post",
+            "data": { model: req },
+            "datatype": "json",
+            "success": function (resp) {
+                if (resp.hasError) {
+                    console.log(resp.hasError)
+                    toastr.error("Please Fill The Form");
+                }
+                else {
+                    $('#pmodelbtnsubmit').attr("disabled", true);
+                    Swal.fire({
+                        title: "Updated!",
+                        text: "Your record has been Updated.",
+                        icon: "success"
+                    });
+                    $("#exampleModalCenter").modal('hide');
+                    $('#usertable').DataTable().ajax.reload();
+                }
+            }
+        })
+    });
+
+
+
+
+    function closeModal() {
+        $('#exampleModalCenter').modal('hide');
+    }
+
+
+</script>

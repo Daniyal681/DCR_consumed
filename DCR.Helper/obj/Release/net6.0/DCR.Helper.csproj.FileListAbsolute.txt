@@ -1,0 +1,11 @@
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\bin\Release\net6.0\DCR.Helper.deps.json
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\bin\Release\net6.0\DCR.Helper.dll
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\bin\Release\net6.0\DCR.Helper.pdb
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\obj\Release\net6.0\DCR.Helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\obj\Release\net6.0\DCR.Helper.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\obj\Release\net6.0\DCR.Helper.AssemblyInfo.cs
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\obj\Release\net6.0\DCR.Helper.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\obj\Release\net6.0\DCR.Helper.dll
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\obj\Release\net6.0\refint\DCR.Helper.dll
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\obj\Release\net6.0\DCR.Helper.pdb
+C:\Users\USER\Desktop\Aaqib\dcr\DCRWebApi\DCRWebApi\DCRWebApi\WebApi\DCR.Helper\obj\Release\net6.0\ref\DCR.Helper.dll

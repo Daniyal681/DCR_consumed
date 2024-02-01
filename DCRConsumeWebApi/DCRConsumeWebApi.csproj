@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>46f5563d-59a8-4ae0-99ca-a1cec6976b29</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Ajax\**" />
+    <Compile Remove="Views\User\**" />
+    <Compile Remove="wwwroot\JSON\**" />
+    <Content Remove="Ajax\**" />
+    <Content Remove="Views\User\**" />
+    <Content Remove="wwwroot\JSON\**" />
+    <EmbeddedResource Remove="Ajax\**" />
+    <EmbeddedResource Remove="Views\User\**" />
+    <EmbeddedResource Remove="wwwroot\JSON\**" />
+    <None Remove="Ajax\**" />
+    <None Remove="Views\User\**" />
+    <None Remove="wwwroot\JSON\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Product\_ProductModel.cshtml" />
+    <Content Remove="Views\Shared\_ProductModel.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\datatables-simple-demo.js" />
+    <None Include="wwwroot\js\scripts.js" />
+    <None Include="wwwroot\js\site.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.23">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NToastNotify" Version="7.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.19.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DCR.Helper\DCR.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>

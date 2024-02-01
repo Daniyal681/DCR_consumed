@@ -1,0 +1,91 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-------------- Table ----------------->
+<main class="content px-3 py-2">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <div class="form-inline justify-content-between col-md-12 mb-2">
+                <div class="button">
+                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter"
+                            class="btn btn-primary btn-sm" id="btnAdd">
+                        <i class="fa-solid fa-plus"></i> Add User
+                    </button>
+                </div>
+                <section class="ModalSection">
+                </section>
+            </div>
+
+            <!-------------- Table ----------------->
+            <div class="container-fluid">
+                <div class="tablecard small col-md-12">
+                    <table id="usertable" class="table table-striped table-bordered small">
+                        <thead>
+                            <tr class="font-weight-bold">
+                                <th>User ID</th>
+                                <th>User Login Id</th>
+                                <th>User Name</th>
+                                <th>User Email</th>
+                                <th>User Contact</th>
+                                <th>User Type</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="UserTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+    // ----------- GET Data FROM API -------------
+
+    $(document).ready(function () {
+        $('#UserTableBody').DataTable({
+            processing: true,
+            serverSide: true,
+            paging: true,
+            filter: true,
+            lengthMenu: [
+                [10, 20, 50, 75, 100, -1],
+                [10, 20, 50, 75, 100, "All"]
+            ],
+            pageLength: 10,
+            scrollX: true,
+            ajax: {
+                url: '@Url.Action("GetUsers","User")',
+                type: "POST"
+            }, 
+            columns: [
+                { data: "userId", "name": "userId" },
+                { data: "userloginId", "name": "userLoginId" },
+                { data: "userName", "name": "userName" },
+                { data: "userEmail", "name": "userEmail" },
+                { data: "userContact", "name": "userContact" },
+                { data: "userType", "name": "userType" },
+            
+                {
+                    data: "UserId", render: function (data, type, row, meta) {
+                        return "<button class='btn btn-primary btnEdit'  data-userid='" + data + "'><i class='fa fa-edit'></i></button>" +
+                            "<button class='btn btn-danger btnDelete' data-userid='" + data + "'><i class='fa fa-trash'></i></button>"
+                    }
+                }
+            ],
+            columnDefs: [
+                {
+                    targets: [0],
+                    // visible: false,
+                    searchable: false
+                }
+            ]
+        });
+    });
+
+</script>
